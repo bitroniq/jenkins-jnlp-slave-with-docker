@@ -1,11 +1,17 @@
 FROM jenkins/slave
 USER root
 
-# prepare home, user for jenkins
-ENV JENKINS_HOME /var/jenkins_home
-
 # Create volume
 VOLUME /var/jenkins_home
+
+# Set variables for Docker node agent
+# !WARNING Make sure that this is the same as "Home Directory" in Jenkins -> configuration
+ENV JENKINS_HOME /var/jenkins_home
+ENV WORKDIR /var/jenkins_home
+ENV AGENT_WORKDIR /var/jenkins_home/agent
+
+
+
 
 # Install requirements and Docker
 RUN apt-get update && \
