@@ -1,5 +1,6 @@
 # jenkins-jnlp-slave-with-docker
 Docker image to run a JNLP slave for Jenkins with Docker Engine installed. Suitable for Docker plugin.
+https://hub.docker.com/r/bitroniq/jenkins-jnlp-slave-with-docker
 
 [![](https://images.microbadger.com/badges/image/bitroniq/jenkins-jnlp-slave-with-docker.svg)](https://microbadger.com/images/bitroniq/jenkins-jnlp-slave-with-docker "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/bitroniq/jenkins-jnlp-slave-with-docker.svg)](https://microbadger.com/images/bitroniq/jenkins-jnlp-slave-with-docker "Get your own version badge on microbadger.com")
