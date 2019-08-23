@@ -1,5 +1,13 @@
 FROM jenkins/slave
 USER root
+
+# prepare home, user for jenkins
+ENV JENKINS_HOME /var/jenkins_home
+
+# Create volume
+VOLUME /var/jenkins_home
+
+# Install requirements and Docker
 RUN apt-get update && \
     apt-get -y install apt-transport-https \
     ca-certificates \
@@ -14,7 +22,9 @@ RUN apt-get update && \
     apt-get update && \
     apt-get -y install docker-ce
 RUN usermod -a -G docker jenkins
-RUN apt-get update && apt-get install -y python-pip 
-RUN mkdir -p /home/jenkins/.ssh && \
-    chown -R 1000:1000 /home/jenkins/.ssh
+
+# Create .ssh directory
+RUN mkdir -p "$JENKINS_HOME"/.ssh && \
+    chown -R 1000:1000 "$JENKINS_HOME"/.ssh
+
 USER jenkins
