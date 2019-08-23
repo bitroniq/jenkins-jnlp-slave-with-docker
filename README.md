@@ -4,7 +4,7 @@ Docker image to run a JNLP slave for Jenkins with Docker Engine installed. Suita
 [![](https://images.microbadger.com/badges/image/bitroniq/jenkins-jnlp-slave-with-docker.svg)](https://microbadger.com/images/bitroniq/jenkins-jnlp-slave-with-docker "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/bitroniq/jenkins-jnlp-slave-with-docker.svg)](https://microbadger.com/images/bitroniq/jenkins-jnlp-slave-with-docker "Get your own version badge on microbadger.com")
 
-> Docker image with [wp-cli](https://wp-cli.org/), [Sage](https://roots.io/sage/) development environment (npm, nodejs, composer, yarn, webpack) and **ssh** service.
+> Docker image with *Java*, *Docker Engine* and basic tools and environment.
 
 > The image is based on the official [jenkins/slave:latest](https://hub.docker.com/r/jenkins/slave).
 
