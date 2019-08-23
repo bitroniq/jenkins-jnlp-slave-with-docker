@@ -10,9 +10,6 @@ ENV JENKINS_HOME /var/jenkins_home
 ENV WORKDIR /var/jenkins_home
 ENV AGENT_WORKDIR /var/jenkins_home/agent
 
-
-
-
 # Install requirements and Docker
 RUN apt-get update && \
     apt-get -y install apt-transport-https \
@@ -30,7 +27,11 @@ RUN apt-get update && \
 RUN usermod -a -G docker jenkins
 
 # Create .ssh directory
-RUN mkdir -p "$JENKINS_HOME"/.ssh && \
+RUN mkdir -p "$JENKINS_HOME" && \
+    chown -R 1000:1000 "$JENKINS_HOME" && \
+    mkdir -p "$WORKDIR" && \
+    chown -R 1000:1000 "$WORKDIR" && \
+    mkdir -p "$JENKINS_HOME"/.ssh && \
     chown -R 1000:1000 "$JENKINS_HOME"/.ssh
 
 USER jenkins
