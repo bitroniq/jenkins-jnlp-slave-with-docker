@@ -31,6 +31,8 @@ RUN mkdir -p "$JENKINS_HOME" && \
     chown -R 1000:1000 "$JENKINS_HOME" && \
     mkdir -p "$WORKDIR" && \
     chown -R 1000:1000 "$WORKDIR" && \
+    mkdir -p "$AGENT_WORKDIR" && \
+    chown -R 1000:1000 "$AGENT_WORKDIR" && \
     mkdir -p "$JENKINS_HOME"/.ssh && \
     chown -R 1000:1000 "$JENKINS_HOME"/.ssh
 
